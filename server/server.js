@@ -23,6 +23,10 @@ app.get('/api/users', (req, res) => {
     res.json(users);
 });
 
+const db = {
+    messages: [] // Un tableau vide pour stocker les messages
+};
+
 // Exemple d'une route pour envoyer un message
 app.post('/api/messages', (req, res) => {
     // Récupérez les données du message depuis req.body
